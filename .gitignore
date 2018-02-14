@@ -1,0 +1,35 @@
+*.class
+
+# package file
+#.jar中央仓库没有支付宝jar文件，所以此处不忽略该类型文件
+*.war
+*.ear
+
+# kdiff3 ignore
+*.orig
+
+# maven ignore
+target/
+
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# idea ignore
+.idea/
+/idea/
+*.ipr
+*.iml
+*.iws
+
+# temp file
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+
+# system ignore
+.DS_Store
+Thumbs.db
