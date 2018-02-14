@@ -22,7 +22,7 @@ game.MyStates.boot = {
     },
     create: function() {
         // 浏览器tab失去焦点时，游戏继续运行
-        game.stage.disableVisibilityChange = true;
+        // game.stage.disableVisibilityChange = true;
         game.state.start('load');
     }
 
