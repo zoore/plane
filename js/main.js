@@ -436,10 +436,25 @@ game.MyStates.over = {
     onShareClick: function () {
         // 展示图片场景由于图片是放置在canvas中，所以长按无法识别二维码
         // 因此只能通过css隐藏一个图片的图层
-
-
+        document.title = makeTitle(game.score);
+        document.getElementById('share').style.display = 'block';
     }
 };
+
+// 生成Title
+var makeTitle = function(score) {
+    if(score < 1000) {
+        return "简版飞机大战，还挺难的，我才" + score + "分，你能得多少分呢？";
+    } else {
+        return "简版飞机大战，我是天才，得了" + score + "分，你能得多少分呢？";
+    }
+}
+
+// 关闭分享
+var onCloseShare = function() {
+    document.getElementById('share').style.display = 'none';
+};
+
 
 // game关联场景
 game.state.add('boot', game.MyStates.boot);
